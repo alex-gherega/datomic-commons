@@ -1,5 +1,5 @@
 (ns datomic-commons.builder
-  (:require datomic-commons.schema :as sch))
+  (:require [datomic-commons.schema :as sch]))
 
 (defn make-data-fn
   "Make a function out of a schema; called with a single argument - a datomic schema map - this function produces the corresponding data builder function:
