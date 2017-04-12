@@ -12,7 +12,7 @@ Calls to this fn will fail if value is not clojure.lang.Named"
 
 (defn filter-schema [k v schema]
   "Filter out all elements in the schema when k exists and schema value for k is not v"
-  (filter #(if-let [value (key %)]
+  (filter #(if-let [value (k %)]
              (not (= value v)))
           schema))
 
