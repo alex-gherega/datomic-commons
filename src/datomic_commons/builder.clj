@@ -12,7 +12,7 @@ Called with two argumetns - a key and a schema - it does the same thing as above
   ([k schema]
    (let [identities (sch/identify k schema)
          args (-> identities vals vec str)
-         body (-> (map #(apply hash-map %) identities) vec str)
+         body (-> (reduce #(apply assoc %1 %2) {} identities) vector str)
+         _ (println body)
          result-str (str "(fn " args " " body ")")]
-                                        ;(println result-str)
      (-> result-str read-string eval))))
