@@ -1,4 +1,4 @@
-(defproject datomic-commons "0.1.4"
+(defproject datomic-commons "0.1.5"
   :description "A place for common utilities in practical projects using Datomic"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"

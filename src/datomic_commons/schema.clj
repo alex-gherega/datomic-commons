@@ -18,5 +18,5 @@ Calls to this fn will fail if value is not clojure.lang.Named"
 
 (defn identify [k schema]
   "Produce a map data structure with keys values associated with k and values the values corresponding to k turned to symbols"
-  (reduce #(apply assoc %1 (extract k %2))
-          {} schema))
+  (into [] (map #(extract k %)) schema))
+
